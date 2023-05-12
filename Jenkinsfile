@@ -102,7 +102,8 @@ agent any
             agent {label 'KOPS'}
                steps {
                 sh "helm upgrade --install --force vprofile-stack helm/vprofile-charts --set appimage=${registry}:V${VBUILD_NUMBER} --namespace prod"
-               }
+            }
         }
+    }
 
 }
